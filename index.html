@@ -11,32 +11,34 @@
   </head>
   <body>
   <header>
+    <!-- BARRA DE NAVEGACION -->
     <nav id="nav-global">
       <ul >
          <li>
           <i class="nav-icon fa fa-home"><span class="nav-text"><a href="#">Home</a></span></i>
          </li>
          <li>
-          <i class="nav-icon fa fa-star"><span class="nav-text"><a href="#">Moments</a></span></i> 
+          <i class="nav-icon fa fa-star"><span class="nav-text"><a href="#">Moments</a></span></i>
         </li>
         <li>
           <i class="nav-icon fa fa-bell"><span class="nav-text"><a href="#">Notifications</a></span></i>
         </li>
         <li>
           <i class="nav-icon fa fa-envelope"><span class="nav-text"><a href="#">Messages</a></span></i>
-        </li>      
+        </li>
         <li>
           <i class="nav-icon fa fa-twitter fa-lg"></i>
         </li>
         <li>
+<!-- FORMULARIO DE BUSQUEDA -->
           <div class="search">
             <form class="form" id="global-nav-search">
-              <input class="search-input" type="text" id="search-query" placeholder="Search Twitter" name="search-field">      
+              <input class="search-input" type="text" id="search-query" placeholder="Search Twitter" name="search-field">
             </form>
         </li>
         <li>
               <button type="submit" id="search-icon">
-                 <i class="nav-icon fa fa-search fa-lg"></i>     
+                 <i class="nav-icon fa fa-search fa-lg"></i>
               </button>
               </li>
               <button class="profile-btn" id="nav-profile"></button>
@@ -55,7 +57,8 @@
   <div id="user-cover" class="cover"> </div>
 
 <main class="container">
-<!--COLUMN 1 -->   
+<!--COLUMN 1 -->
+<!-- PROFILE SUMMARY -->
 <div id="column-left" class="column container">
     <section id="presentation" class="column-section">
      <article>
@@ -90,6 +93,7 @@
       </ul>
       </span>
   </section>
+<!-- WORLD TRENDS -->
   <section id="world-trends" class="column-section">
 <article>
     <span>
@@ -162,23 +166,20 @@
 </div>
 
 <!--COLUMN 2 -->
-<div id="column-center" class="column container">  
-  <section id="new-tweet" class="column-section">
-    <article id="nt-profile">
-    <button class="profile-btn3" id="nt-id-profile"></button>
-      <form id="nt-form" action="">
-        <input id="nt-input" type="text" placeholder="What's happening?" data-nt="nt-text">
-        <span id="charCounter">140</span>
-        <button id="nt-submit" type="submit">Tweet</button> 
-      </form>
-    </article>
+<!-- NEW TWEET -->
+<div id="column-center" class="column container">
+  <section id="textBox">
+    <div class="profile-pin"></div>
+    <textarea  id="boxText" name="comentario" rows="2" cols="141" maxlength="280"></textarea>
+    <div class= "count" maxlength="" id="wordCount"></div>
+    <button id="nt-submit" type="submit">Tweet</button>
   </section>
 
-
-  <section id="no-seen" class="column-section">  
+<!--  TWEETS  NO SEEN -->
+  <section id="no-seen" class="column-section">
  <p><a id="no-seen-counter">See <span id="ns-counter">35</span> new tweets</a></p>
   </section>
-
+<div id="fixing"></div>
   <section id="stream" class="column-section">
     <article>
      <button class="profile-btn3" data-tweeter="user-id" id="tweeter-profile" class="ctweeter-profile"></button>
@@ -197,14 +198,14 @@
 	 	</li>
 	     <li>
 	     	<a>
-	     	<p>678 
+	     	<p>678
 	     		<i id="retweet" class="cretweet fa fa-retweet dark-gray"></i>
 	     	</p>
 	     </a>
 	 	</li>
 	     <li>
 	     	<a>
-	     	<p>324 
+	     	<p>324
 	     		<i id="favorites" class="cfavorites fa fa-heart-o dark-gray"></i>
 	     	</p>
 	     </a>
@@ -220,11 +221,16 @@
  </div>
   </article>
   </section>
+  <div id="printTweet">
+    <p id="textTweet" ></p>
+    <p id="tweet-time"></p>
+  </div>
 </div>
+
 
 <!--COLUMN 3 -->
 <div id="column-right" class="column container">
-  <section id="to-follow" class="column-section"> 
+  <section id="to-follow" class="column-section">
     <article>
       <h3 class="mb-0">Who to follow</h3>
           <a href="#"><h5 class="blue sub2">Refreh</h5></a>
@@ -293,7 +299,7 @@
           </article>
         </li>
       </ul>
-    </span>    
+    </span>
   </section>
   <section id="find-people" class="column-section2">
     <article>
@@ -305,7 +311,7 @@
   <div>
   <sectiion id="help" class="column-section">
     <ul id="support-list">
-   
+
     <li> <p> &copy; 2017 Twitter</p>
       <p><a href="#">About</a></p>
       </li>
@@ -358,13 +364,6 @@
   </div>
  </div>
 </main>
-
-
-
-
-
-
-
-  <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>

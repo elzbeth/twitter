@@ -1,33 +1,23 @@
 
-@font-face {
-    font-family: 'icomoon';
-    src:url('../assets/fonts/icomoon.eot');
-    src:url('../assets/fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-        url('../assets/fonts/icomoon.svg#icomoon') format('svg'),
-				url('../assets/fonts/icomoon.woff') format('woff'),
-				url('../assets/fonts/icomoon.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
- 
+
 /*===== FONT COLOURS =====*/
 
 .black{
-color:#14171A; 
+color:#14171A;
 }
 .blue{
 color:#1DA1F2;
 }
 .dark-gray{
-color:#657786; 
+color:#657786;
 }
 .extra-light-gray{
-color:#F5F8FA; 
+color:#F5F8FA;
 }
 .light-gray{
-color:#AAB8C2; 
+color:#AAB8C2;
 }
-.white{
+.#fff{
 color: #FFF;
 }
 
@@ -35,8 +25,8 @@ color: #FFF;
 /*=====GENERAL===========*/
 html, body {
 	margin:0;
-  	overflow-x: hidden;
 	padding:0;
+  	overflow-x: hidden;
 }
 
 body {
@@ -49,9 +39,9 @@ body {
 
 a {
 	cursor: pointer;
-	text-decoration: none;
 	font-family: sans-serif;
-	
+	text-decoration: none;
+
 
 }
 
@@ -59,8 +49,8 @@ p{
 	color: #657786;
 	font-size: 14px;
 	font-weight: 400;
-	text-align: left;
 	margin-bottom: 0;
+	text-align: left;
 }
 
 .container {
@@ -121,11 +111,11 @@ header{
 /*-----NAV--------*/
 nav{
 	background-color: #f5f8fa;
-	height:60px;
-	width:100%;
-	position: fixed;
-	z-index: 2;
 	float: left;
+	height:60px;
+	position: fixed;
+	width:100%;
+	z-index: 2;
 
 }
 nav ul li, button, form{
@@ -187,15 +177,15 @@ form:hover{
 }
 
 .search {
+	display:inline-block;
 	float: right;
 	padding-bottom: 0px;
 	position: relative;
-	display:inline-block;
 }
 .search-input{
 	background-color: #fff;
-	border: 2px solid rgb(29,161,242);
 	border-radius: 21px;
+	border: 2px solid rgb(29,161,242);
 	box-shadow: none;
 	box-sizing: border-box;
 	display: block;
@@ -319,6 +309,17 @@ form:hover{
 	 display: inline-block;
 	 vertical-align: top;
 }
+
+#printTweet {
+  background-color: #fff;
+  color: #000;
+  display: inline-block;
+  width: 98.5%;
+}
+
+textarea {
+  resize: vertical;
+}
 /*-----COLUMN 3---*/
 #column-right{
 	width: 22%;
@@ -345,7 +346,7 @@ form:hover{
 	height: 40px;
 	 width: 96.2%;
 }
- 
+
 
 .profile-btn {
 	border-radius: 50%;
@@ -382,6 +383,19 @@ form:hover{
 	background-image: url(../assets/images/twitter-user.jpg);
 	background-size: cover;
 	position: relative;
+	outline: none;
+	border:none;
+}
+
+.profile-pin {
+	display: inline-block;
+	border-radius: 50%;
+	float: left;
+	margin: 15px 0px 0px 0px;
+	height: 44px;
+	width: 44px;
+	background-image: url(../assets/images/twitter-user.jpg);
+	background-size: cover;
 	outline: none;
 	border:none;
 }
@@ -441,8 +455,8 @@ form:hover{
 
 #advertise {
 	clear: both;
-} 
-	
+}
+
 
 
 
@@ -543,13 +557,16 @@ article{
 	line-height: 14px;
 }
 
-#new-tweet{
+coun#new-tweet{
 	height:100px;
 	background-color: #e8f5ed;
-	
+	display: block;
+	position: relative;
+
 }
 
 #no-seen{
+
 	height:40px;
 	margin-top: 0;
 	margin-bottom: 0;
@@ -587,6 +604,9 @@ article{
 	display: inline-block;
 	position: relative;
 	padding:8px auto;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	margin-right: 10px;
 }
 
 #nt-form{
@@ -618,38 +638,109 @@ article{
 	word-wrap: normal;
 }
 
-#nt-form input[placeholder]:hover{
-	color: #1DA1F2;
-}
-
 
 #nt-submit{
-	outline: 3px solid red;
-	display: block;
-	position: relative;
-	margin-left: 400px;
+	margin-top: 10px;
+	margin-left: 255px;
+	margin-bottom: 40px;
 	background-color: #1DA1F2;
 	color:#fff;
 	border-radius: 40px;
-	padding: 10px 24px;
 	border: none;
 	outline: none;
-	margin-top: 10px;
 	font-size:14px;
 	font-weight: 700;
-	line-height: 20px;
-	padding:6px 16px;
+	padding:8px 21px;
 	cursor: pointer;
+	display: inline-block;
 
 }
 
-#charCounter{
+#nt-submit:hover{
+	margin-top: 10px;
+	margin-left: 255px;
+	margin-bottom: 100px;
+	background-color: #green;
+	color:#fff;
+	border-radius: 40px;
+	border: none;
+	outline: none;
+	font-size:14px;
+	font-weight: 700;
+	padding:8px 21px;
+	cursor: pointer;
+	display: inline-block;
+
+}
+.btn-tw{
+	display: inline-block;
+	margin-left: 20px;
+
+}
+
+#fixing{
+	clear:both;
+}
+
+.count{
+	display: inline-block;
+	width: 20px;
+	font-family: 'Roboto',sans-serif;
 	display: block;
 	position: absolute;
 	margin:10px 5px;
 	font-size: 12px;
 	font-weight: 700;
 	color: #657786; 
+	cursor: none;
+}
+
+/*-----tweet---*/
+
+#textBox{
+	padding-left: 50px;
+	width: auto;
+	height: auto;
+	background-color: #fff;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	margin-right: 10px;
+	text-overflow: ellipsis;
+	overflow-y: hidden;
+}
+
+#boxText{
+	margin-top: 10px;
+	margin-left: 30px;
+	border:1px solid #c6e7fb;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	background-color: #fff;
+	width: 78%;
+	height: 40px;
+	overflow: auto;
+	resize: none;	
+	border-radius: 20px;
+	line-height: 20px;
+	font-size: 14px;
+	outline: none;
+	white-space: nowrap;
+word-wrap: normal;
+}
+
+#boxText:focus{
+	outline: none;
+	box-shadow: 0px 2px 4px 0px #657786;
+}
+
+
+#charCounter{
+	display: inline-block;
+	position: absolute;
+	margin:10px 5px;
+	font-size: 12px;
+	font-weight: 700;
+	color: #657786;
 	cursor: none;
 }
 
