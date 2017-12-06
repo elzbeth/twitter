@@ -81,7 +81,6 @@ function addTweet(event) {
 
       // agregar los elementos a los elementos existentes
       container.appendChild(author);
-      author.style.padding = "10px";
       container.appendChild(account);
       container.appendChild(message);
       container.appendChild(time);
