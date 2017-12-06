@@ -1,8 +1,11 @@
+// VARIABLES
 var boxText = document.getElementById("boxText");
 var wordCount = document.getElementById("wordCount");
 var button = document.getElementById("nt-submit");
 var printTweet = document.getElementById('printTweet');
 var tweetTime = document.getElementById('tweet-time');
+var textarea = document.querySelector('textarea');
+
 
 boxText.addEventListener("keyup",function(){
     var characters = boxText.value.split('',140);
@@ -10,6 +13,14 @@ boxText.addEventListener("keyup",function(){
 });
 
 boxText.addEventListener("keyup", counter);
+
+//EVENTOS
+tweetTime.addEventListener('click',addTweet);
+button.addEventListener('click', addTweet);
+textarea.addEventListener('keydown', autosize);
+
+
+//FUNCIONES 
 
 function counter() {
      var characters = boxText.value.split('');
@@ -32,10 +43,10 @@ function counter() {
     }
 }
 
-tweetTime.addEventListener('click',addTweet);
+
 
 function gettingTime() {
-  var time = new Date();
+ 	var time = new Date();
     var hours = time.getHours();
     var minutes = time.getMinutes();
     var meridian = '';
@@ -51,7 +62,7 @@ function gettingTime() {
     return hours + ':' + minutes + ' ' + meridian;
 }
 
-button.addEventListener('click', addTweet);
+
 
 function addTweet(event) {
     event.preventDefault();
@@ -75,50 +86,21 @@ function addTweet(event) {
       container.appendChild(time);
       printTweet.appendChild(container);
 
-   boxText.value = ' ';  // segun para dejar vacio el textarea despues de dar submit
-     wordCount.textContent=140;                    //pero aun no funciona :(
+   boxText.value = ' ';  // Para dejar vacio el textarea despues de dar submit
+     wordCount.textContent=140;                    
 
 }
 
-  /* este es el codigo que se utilizaria para
-    crear todos los elementos de la section con id stream
-     var newtweet = document.createElement('article');
-        var newButton = document.createElement('button');
-        var newAuthor = document.createElement('p');
-        var newAacount = document.createElement('p');
-        var newTxt = document.createElement('p');
-
-        newTxt.innerText = boxText.value;
-
-        newTweet.appendChild('newButton');
-        newTweet.appendChild('newAuthor');
-        newTweet.appendChild('newAacount');
-        newTweet.appendChild('newTxt');
-
-        document.getElementById('stream').appendChild('newTweet');
-
-
-*/
 
 
 
-//counter();
 
-//}
-//Fin de la conversación de chat
-//Escribe un mensaje...
 
-//Elegir archivos
-var textarea = document.querySelector('textarea');
-
-textarea.addEventListener('keydown', autosize);
-
-function autosize(){
+function autosize(){ //ajusta el tamaño del textarea.
   var el = this;
   setTimeout(function(){
     el.style.cssText = 'height:auto; padding:0';
-    // for box-sizing other than "content-box" use:
-    // el.style.cssText = '-moz-box-sizing:content-box';
     el.style.cssText = 'height:' + el.scrollHeight + 'px';
   },0);
 }
+
